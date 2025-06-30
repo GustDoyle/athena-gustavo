@@ -23,35 +23,36 @@
     }
 
     header {
-      position: relative;
-      text-align: center;
       background: #ffffff;
       color: #000000;
       border-bottom: 4px solid #000000;
-      padding: 0;
+      text-align: center;
     }
 
-    header .header-floral {
+    .header-floral {
       width: 100%;
-      max-height: 200px;
+      height: auto;
+      max-height: 300px;
       object-fit: cover;
       display: block;
     }
 
-    header .header-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 1rem 2rem;
-      max-width: 90vw;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 10px;
-      text-align: center;
+    .header-text {
+      padding: 2rem 1rem 1rem;
+      max-width: 800px;
+      margin: auto;
     }
 
     h1, h2 {
       margin: 1rem 0;
+    }
+
+    .palace {
+      font-family: 'Palace Script MT', cursive;
+      font-size: 5rem;
+      font-weight: normal;
+      line-height: 1.1;
+      word-break: break-word;
     }
 
     section {
@@ -105,15 +106,6 @@
       margin-bottom: 2rem;
     }
 
-    .palace {
-      font-family: 'Palace Script MT', cursive;
-      font-size: 6rem;
-      font-weight: normal;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-      word-break: break-word;
-    }
-
     /* Swiper custom */
     .swiper {
       width: 100%;
@@ -142,14 +134,10 @@
       color: #ddd;
     }
 
-    /* Media queries para telas pequenas */
+    /* Responsividade */
     @media (max-width: 900px) {
       .palace {
-        font-size: 4.5rem;
-      }
-
-      header .header-text {
-        padding: 1rem 1.5rem;
+        font-size: 4rem;
       }
 
       .swiper {
@@ -158,15 +146,8 @@
     }
 
     @media (max-width: 600px) {
-      /* Tornar o header-text estático para evitar sobreposição */
-      header .header-text {
-        position: static;
-        transform: none;
-        padding: 1rem 1rem 0.5rem;
-        max-width: 100%;
-        background: transparent;
-        border-radius: 0;
-        color: #000;
+      .header-text {
+        padding: 1.5rem 1rem 1rem;
       }
 
       .palace {
@@ -174,8 +155,7 @@
       }
 
       section {
-        padding: 1rem 1rem 2rem 1rem;
-        max-width: 100%;
+        padding: 1rem;
       }
 
       .swiper {
@@ -187,7 +167,6 @@
         font-size: 0.8rem;
       }
 
-      /* Ajustar os textos para não invadir outras áreas */
       .info, .pix {
         font-size: 0.9rem;
       }
@@ -238,7 +217,6 @@
 
   <section>
     <h2>Nossas Fotos</h2>
-    <!-- Swiper -->
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="img/foto1.jpg" alt="Athena e Gustavo 1"></div>
@@ -246,8 +224,6 @@
         <div class="swiper-slide"><img src="img/foto3.jpg" alt="Athena e Gustavo 3"></div>
         <div class="swiper-slide"><img src="img/foto4.jpg" alt="Athena e Gustavo 4"></div>
       </div>
-
-      <!-- Setas -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
@@ -267,7 +243,7 @@
   <section>
     <h2>Confirme sua presença</h2>
     <p>Por favor, confirme até o dia <strong>20/08/2025</strong> para nos ajudar na organização:</p>
-    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeBcWlPoBZiFtT39-vMlhuv0SF1VBcVq_z6nwMaDF3i7_qk2g/viewform?usp=sharing&ouid=114227836478267888564" target="_blank">Confirmar presença</a>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeBcWlPoBZiFtT39-vMlhuv0SF1VBcVq_z6nwMaDF3i7_qk2g/viewform?usp=sharing" target="_blank">Confirmar presença</a>
     <p><strong>Todas as crianças são muito bem-vindas!</strong></p>
   </section>
 
