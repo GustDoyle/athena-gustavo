@@ -5,101 +5,171 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Athena & Gustavo - Finalmente vão casar!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
   <style>
-    body { font-family: Georgia, serif, sans-serif; background: #fff; color: #333; margin:0; padding:0; box-sizing: border-box; }
-    *,*::before,*::after { box-sizing: inherit; }
+    body {
+      font-family: Georgia, serif, sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
 
     header {
-      background: #fff;
-      border-bottom: 4px solid #000;
+      position: relative;
       text-align: center;
+      background: #fff;
+      color: #000;
+      border-bottom: 4px solid #000;
     }
+
     .header-floral {
       width: 100%;
       height: auto;
-      max-height: 250px;
+      max-height: 280px;
       object-fit: cover;
       display: block;
     }
+
     .header-text {
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      max-width: 90vw;
       text-align: center;
     }
-    h1,h2 { margin:1rem 0; }
+
     .palace {
       font-family: 'Palace Script MT', cursive;
       font-size: 4rem;
       line-height: 1.1;
-      word-break: break-word;
+      margin: 0;
     }
+
+    h1, h2 {
+      margin: 1rem 0;
+    }
+
     section {
-      padding:1.5rem;
-      max-width:800px;
-      margin:auto;
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: auto;
     }
+
     .info, .pix {
-      background:#dfdfdf;
-      border-left:4px solid;
-      margin:1rem 0;
-      padding:1rem;
-      word-wrap: break-word;
+      background: #dfdfdf;
+      border-left: 4px solid;
+      margin: 1rem 0;
+      padding: 1rem;
     }
-    .info { border-color:#000; }
-    .pix { border-color:#5c5c5c; }
+
+    .info { border-color: #000; }
+    .pix { border-color: #5c5c5c; }
+
     footer {
-      text-align:center;
-      padding:2rem;
-      background:#f5f5f5;
-      font-size:0.9rem;
-      color:#777;
+      text-align: center;
+      padding: 2rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+      color: #777;
     }
+
     a.button {
-      background:#141414;
-      color:#fff;
-      padding:0.8rem 1.5rem;
-      border-radius:5px;
-      text-decoration:none;
-      display:inline-block;
-      margin-top:1rem;
-      transition: background-color .3s;
+      background: #141414;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
     }
-    a.button:hover { background:#0f0f0f; }
 
-    /* Swiper */
+    a.button:hover {
+      background: #0f0f0f;
+    }
+
     .swiper {
-      width:100%; max-width:800px;
-      height:350px;
-      margin:2rem auto;
+      width: 100%;
+      max-width: 800px;
+      height: 350px;
+      margin: 2rem auto;
+      position: relative;
     }
-    .swiper-slide { display:flex; justify-content:center; align-items:center; height:100%; }
-    .swiper-slide img { width:100%; height:100%; object-fit:cover; border-radius:10px; }
-    .swiper-button-prev, .swiper-button-next { color:#ddd; }
 
-    /* RESPONSIVE */
-    @media (max-width:900px) {
-      .palace { font-size:3.5rem; }
-      .swiper { height:280px; }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
-    @media (max-width:600px) {
-      .header-floral { max-height:180px; }
-      .palace { font-size:2.4rem; }
-      section { padding:1rem; }
-      .swiper { height:200px; }
-      footer { padding:1rem; font-size:0.8rem; }
-      .info, .pix { font-size:0.9rem; }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
-    @media (max-width:400px) {
-      .palace { font-size:2rem; }
-      .swiper { height:160px; }
-      .info, .pix { font-size:0.85rem; }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #ddd;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .header-floral {
+        max-height: 320px;
+      }
+
+      .header-text {
+        padding: 1rem;
+        max-width: 90%;
+      }
+
+      .palace {
+        font-size: 2.5rem;
+      }
+
+      .swiper {
+        height: 220px;
+      }
+
+      section {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .palace {
+        font-size: 2rem;
+      }
+
+      .swiper {
+        height: 180px;
+      }
+
+      .info, .pix {
+        font-size: 0.9rem;
+      }
+
+      footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="img/header-floral.png" alt="Floral minimalista" class="header-floral">
     <div class="header-text">
@@ -111,13 +181,71 @@
 
   <section>
     <h2>O Grande Dia</h2>
-    <div class="info">…</div>
-    <div class="info">…</div>
+    <div class="info">
+      <strong>📍 Cerimônia:</strong><br>
+      Paróquia Bom Jesus dos Aflitos<br>
+      R. Cel. Nogueira Padilha, 583 - Vila Hortência, Sorocaba - SP<br>
+      <strong>⏰ Às 16h</strong>
+    </div>
+    <div class="info">
+      <strong>🎉 Festa:</strong><br>
+      Santa Luiza Eventos<br>
+      J9G5+H9 - Bacaetava, Iperó - SP<br>
+      <strong>⏰ Às 19h</strong>
+    </div>
     <p>Esperamos vocês para comemorar esse dia tão especial, que nós aguardamos por anos!</p>
   </section>
 
   <section>
     <h2>Nossas Fotos</h2>
-    <div class="swiper"><div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img/foto1.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="img/foto2.jpg
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/foto1.jpg" alt="Athena e Gustavo 1"></div>
+        <div class="swiper-slide"><img src="img/foto2.jpg" alt="Athena e Gustavo 2"></div>
+        <div class="swiper-slide"><img src="img/foto3.jpg" alt="Athena e Gustavo 3"></div>
+        <div class="swiper-slide"><img src="img/foto4.jpg" alt="Athena e Gustavo 4"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <section class="pix">
+    <h2>Nosso maior presente é a sua presença!</h2>
+    <p>Mas se quiser nos presentear, aqui vão algumas dicas:</p>
+    <p>Tem a nossa lista no mercado livre, com itens realistas e uns porque vai que alguém ganha na MegaSena:</p>
+    <a class="button" href="https://www.mercadolivre.com.br/presentes/athena-e-gustavo-2r67i" target="_blank">
+      Acessar nossa lista de presentes
+    </a>
+    <p>Tem pix... ❤️</p>
+    <p><strong>Pix geral:</strong> athena.nha@gmail.com (e-mail - Athena)</p>
+  </section>
+
+  <section>
+    <h2>Confirme sua presença</h2>
+    <p>Por favor, confirme até o dia <strong>20/08/2025</strong> para nos ajudar na organização:</p>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeBcWlPoBZiFtT39-vMlhuv0SF1VBcVq_z6nwMaDF3i7_qk2g/viewform" target="_blank">Confirmar presença</a>
+    <p><strong>Todas as crianças são muito bem-vindas!</strong></p>
+  </section>
+
+  <footer>
+    Com amor, Athena & Gustavo ❤️<br>
+    Nosso casamento acontecerá com muita alegria e sem taxas escondidas.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 30000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
