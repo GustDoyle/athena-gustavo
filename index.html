@@ -4,12 +4,14 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Athena & Gustavo - Finalmente vão casar!</title>
+
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <style>
     body {
-      font-family: Georgia, serif, sans-serif;
-      background: #fff;
+      font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+      background: #ffffff;
       color: #333;
       margin: 0;
       padding: 0;
@@ -23,15 +25,15 @@
     header {
       position: relative;
       text-align: center;
-      background: #fff;
-      color: #000;
-      border-bottom: 4px solid #000;
+      background: #ffffff;
+      color: #000000;
+      border-bottom: 4px solid #000000;
+      padding: 0;
     }
 
     .header-floral {
       width: 100%;
-      height: auto;
-      max-height: 280px;
+      max-height: 200px;
       object-fit: cover;
       display: block;
     }
@@ -41,18 +43,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.85);
       padding: 1rem 2rem;
-      border-radius: 10px;
       max-width: 90vw;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
       text-align: center;
-    }
-
-    .palace {
-      font-family: 'Palace Script MT', cursive;
-      font-size: 4rem;
-      line-height: 1.1;
-      margin: 0;
     }
 
     h1, h2 {
@@ -63,17 +58,20 @@
       padding: 1.5rem;
       max-width: 800px;
       margin: auto;
+      text-align: center;
     }
 
     .info, .pix {
       background: #dfdfdf;
-      border-left: 4px solid;
+      border-left: 4px solid #000000;
       margin: 1rem 0;
       padding: 1rem;
+      word-wrap: break-word;
     }
 
-    .info { border-color: #000; }
-    .pix { border-color: #5c5c5c; }
+    .pix {
+      border-left-color: #5c5c5c;
+    }
 
     footer {
       text-align: center;
@@ -91,10 +89,20 @@
       border-radius: 5px;
       display: inline-block;
       margin-top: 1rem;
+      transition: background-color 0.3s ease;
     }
 
     a.button:hover {
       background: #0f0f0f;
+    }
+
+    .palace {
+      font-family: 'Palace Script MT', cursive;
+      font-size: 6rem;
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+      word-break: break-word;
     }
 
     .swiper {
@@ -124,46 +132,64 @@
       color: #ddd;
     }
 
-    /* Responsivo */
-    @media (max-width: 768px) {
-      .header-floral {
-        max-height: 320px;
-      }
-
+    /* MOBILE ONLY ADJUSTMENTS */
+    @media (max-width: 600px) {
       .header-text {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding: 1rem;
-        max-width: 90%;
+        max-width: 85vw;
+        background: rgba(255,255,255,0.85);
+        border-radius: 10px;
       }
 
       .palace {
         font-size: 2.5rem;
       }
 
-      .swiper {
-        height: 220px;
+      .header-floral {
+        max-height: 160px;
       }
 
       section {
         padding: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .palace {
-        font-size: 2rem;
+        max-width: 100%;
+        text-align: center;
       }
 
       .swiper {
-        height: 180px;
-      }
-
-      .info, .pix {
-        font-size: 0.9rem;
+        height: 200px;
       }
 
       footer {
         padding: 1rem;
         font-size: 0.8rem;
+      }
+
+      .info, .pix {
+        font-size: 0.9rem;
+        text-align: left;
+      }
+
+      a.button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .palace {
+        font-size: 2rem;
+      }
+
+      .swiper {
+        height: 160px;
+      }
+
+      .info, .pix {
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -213,10 +239,8 @@
   <section class="pix">
     <h2>Nosso maior presente é a sua presença!</h2>
     <p>Mas se quiser nos presentear, aqui vão algumas dicas:</p>
-    <p>Tem a nossa lista no mercado livre, com itens realistas e uns porque vai que alguém ganha na MegaSena:</p>
-    <a class="button" href="https://www.mercadolivre.com.br/presentes/athena-e-gustavo-2r67i" target="_blank">
-      Acessar nossa lista de presentes
-    </a>
+    <p>Tem a nossa lista no Mercado Livre, com itens realistas e uns porque vai que alguém ganha na MegaSena:</p>
+    <a class="button" href="https://www.mercadolivre.com.br/presentes/athena-e-gustavo-2r67i" target="_blank">Acessar nossa lista de presentes</a>
     <p>Tem pix... ❤️</p>
     <p><strong>Pix geral:</strong> athena.nha@gmail.com (e-mail - Athena)</p>
   </section>
@@ -224,7 +248,7 @@
   <section>
     <h2>Confirme sua presença</h2>
     <p>Por favor, confirme até o dia <strong>20/08/2025</strong> para nos ajudar na organização:</p>
-    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeBcWlPoBZiFtT39-vMlhuv0SF1VBcVq_z6nwMaDF3i7_qk2g/viewform" target="_blank">Confirmar presença</a>
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeBcWlPoBZiFtT39-vMlhuv0SF1VBcVq_z6nwMaDF3i7_qk2g/viewform?usp=sharing" target="_blank">Confirmar presença</a>
     <p><strong>Todas as crianças são muito bem-vindas!</strong></p>
   </section>
 
@@ -233,6 +257,7 @@
     Nosso casamento acontecerá com muita alegria e sem taxas escondidas.
   </footer>
 
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
