@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <style>
-    /* Reset box sizing para todos os elementos */
+    /* Box sizing global */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -31,13 +31,17 @@
       padding: 0;
     }
 
+    /* Imagem floral grande no desktop */
     header .header-floral {
       width: 100%;
       max-height: 200px;
       object-fit: cover;
       display: block;
+      margin-bottom: 0; /* remove espaço embaixo */
+      transition: max-height 0.3s ease;
     }
 
+    /* Texto centralizado sobre a imagem no desktop */
     header .header-text {
       position: absolute;
       top: 50%;
@@ -45,7 +49,6 @@
       transform: translate(-50%, -50%);
       padding: 1rem 2rem;
       max-width: 90vw;
-      background: rgba(255, 255, 255, 0.85);
       border-radius: 10px;
       text-align: center;
       line-height: 1.3;
@@ -117,6 +120,7 @@
       line-height: 1;
       margin-bottom: 0.3rem;
       word-break: break-word;
+      transition: font-size 0.3s ease;
     }
 
     /* Swiper custom */
@@ -147,75 +151,65 @@
       color: #ddd;
     }
 
-    /* Media queries para telas pequenas */
-
-    /* Até 900px largura */
-    @media (max-width: 900px) {
-      .palace {
-        font-size: 4.5rem;
-      }
-
-      header .header-text {
-        padding: 1rem 1.5rem;
-      }
-
-      .swiper {
-        height: 280px;
-      }
-    }
-
-    /* Até 600px largura (mobile) */
+    /* ======== MOBILE ======== */
     @media (max-width: 600px) {
-      /* Header: remover posicionamento absoluto para evitar sobreposição */
+      /* Diminuir imagem floral e permitir que o texto sobreponha */
+      header .header-floral {
+        max-height: 120px; /* menor altura */
+        object-fit: contain; /* para não cortar */
+        margin-bottom: 0; /* sem espaço extra */
+      }
+
+      /* O texto fica fixo no topo, sobreposto à imagem */
       header .header-text {
-        position: static;
-        transform: none;
-        padding: 1rem 1rem 0.5rem;
-        max-width: 100%;
-        background: transparent;
-        border-radius: 0;
-        color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.5rem 1rem;
+        max-width: 90vw;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+        text-align: center;
+        line-height: 1.2;
+        z-index: 10;
       }
 
-      /* Deixar o nome menor e centralizado */
+      /* Diminui tamanho do nome para não ficar gigante */
       .palace {
-        font-size: 2.8rem;
-        margin-bottom: 0.5rem;
+        font-size: 3rem !important;
+        margin-bottom: 0.2rem;
       }
 
-      /* Ajustar o padding das seções para largura total */
       section {
         padding: 1rem 1rem 2rem 1rem;
         max-width: 100%;
       }
 
-      /* Diminuir a altura do swiper */
       .swiper {
         height: 200px;
       }
 
-      /* Ajustar o footer */
       footer {
         padding: 1rem;
         font-size: 0.8rem;
       }
 
-      /* Ajustar fonte das infos para melhor leitura */
       .info, .pix {
         font-size: 0.9rem;
       }
 
-      /* Ajustar o header-floral para manter proporção e ficar próximo do texto */
-      header .header-floral {
-        max-height: 150px;
-        object-fit: contain;
+      /* Deixa a sessão pix centralizada com max-width */
+      .pix {
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
-    /* Até 400px largura (mobile pequeno) */
     @media (max-width: 400px) {
       .palace {
-        font-size: 2rem;
+        font-size: 2.4rem !important;
       }
 
       .swiper {
@@ -286,7 +280,6 @@
 
   <section>
     <h2>Confirme sua presença</h2>
-    <p>Por favor, confirme até o dia <strong>20/08/2025</strong> para nos ajudar na organização:</p>
     <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeBcWlPoBZiFtT39-vMlhuv0SF1VBcVq_z6nwMaDF3i7_qk2g/viewform?usp=sharing&ouid=114227836478267888564" target="_blank">Confirmar presença</a>
     <p><strong>Todas as crianças são muito bem-vindas!</strong></p>
   </section>
