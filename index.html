@@ -9,150 +9,203 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <style>
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-  background: #ffffff;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+      background: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header {
-  position: relative;
-  text-align: center;
-  background: #ffffff;
-  color: #000000;
-  border-bottom: 4px solid #000000;
-  padding: 0;
-}
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
 
-header .header-floral {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-}
+    header {
+      position: relative;
+      text-align: center;
+      background: #ffffff;
+      color: #000000;
+      border-bottom: 4px solid #000000;
+      padding: 0;
+    }
 
-header .header-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1rem;
-}
+    header .header-floral {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
 
-h1, h2 {
-  margin: 1rem 0;
-}
+    header .header-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 2rem;
+      max-width: 90vw;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      text-align: center;
+    }
 
-section {
-  padding: 1.5rem;
-  max-width: 800px;
-  margin: auto;
-}
+    h1, h2 {
+      margin: 1rem 0;
+    }
 
-.info {
-  background: #dfdfdf;
-  border-left: 4px solid #000000;
-  margin: 1rem 0;
-  padding: 1rem;
-}
+    section {
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
 
-.pix {
-  background: #dfdfdf;
-  border-left: 4px solid #5c5c5c;
-  margin-top: 1rem;
-  padding: 1rem;
-}
+    .info {
+      background: #dfdfdf;
+      border-left: 4px solid #000000;
+      margin: 1rem 0;
+      padding: 1rem;
+      word-wrap: break-word;
+    }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #f5f5f5;
-  font-size: 0.9rem;
-  color: #777;
-}
+    .pix {
+      background: #dfdfdf;
+      border-left: 4px solid #5c5c5c;
+      margin-top: 1rem;
+      padding: 1rem;
+      word-wrap: break-word;
+    }
 
-a.button {
-  background: #141414;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
-}
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+      color: #777;
+    }
 
-a.button:hover {
-  background: #0f0f0f;
-}
+    a.button {
+      background: #141414;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
 
-nav {
-  text-align: center;
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-}
+    a.button:hover {
+      background: #0f0f0f;
+    }
 
-.palace {
-  font-family: 'Palace Script MT', cursive;
-  font-size: 6rem;
-  font-weight: normal;
-}
+    nav {
+      text-align: center;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
 
-/* Swiper custom */
-.swiper {
-  width: 100%;
-  max-width: 800px;
-  height: 350px; /* altura fixa */
-  margin: 2rem auto;
-  position: relative;
-}
+    .palace {
+      font-family: 'Palace Script MT', cursive;
+      font-size: 6rem;
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+      word-break: break-word;
+    }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+    /* Swiper custom */
+    .swiper {
+      width: 100%;
+      max-width: 800px;
+      height: 350px;
+      margin: 2rem auto;
+      position: relative;
+    }
 
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* mantém a imagem proporcional dentro da área */
-  border-radius: 10px;
-}
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
 
-/* Setas de navegação em cinza claro quase branco */
-.swiper-button-prev,
-.swiper-button-next {
-  color: #ddd;
-}
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-/* Media queries para telas pequenas */
-@media (max-width: 600px) {
-  .palace {
-    font-size: 3rem;
-  }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #ddd;
+    }
 
-  header .header-text {
-    position: static;
-    transform: none;
-    padding: 1rem;
-  }
+    /* Media queries para telas pequenas */
+    @media (max-width: 900px) {
+      .palace {
+        font-size: 4.5rem;
+      }
 
-  section {
-    padding: 1rem;
-    max-width: 100%;
-  }
+      header .header-text {
+        padding: 1rem 1.5rem;
+      }
 
-  .swiper {
-    height: 200px; /* diminuir altura no mobile */
-  }
+      .swiper {
+        height: 280px;
+      }
+    }
 
-  footer {
-    padding: 1rem;
-    font-size: 0.8rem;
-  }
-}
+    @media (max-width: 600px) {
+      /* Tornar o header-text estático para evitar sobreposição */
+      header .header-text {
+        position: static;
+        transform: none;
+        padding: 1rem 1rem 0.5rem;
+        max-width: 100%;
+        background: transparent;
+        border-radius: 0;
+        color: #000;
+      }
+
+      .palace {
+        font-size: 2.8rem;
+      }
+
+      section {
+        padding: 1rem 1rem 2rem 1rem;
+        max-width: 100%;
+      }
+
+      .swiper {
+        height: 200px;
+      }
+
+      footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+      }
+
+      /* Ajustar os textos para não invadir outras áreas */
+      .info, .pix {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .palace {
+        font-size: 2rem;
+      }
+
+      .swiper {
+        height: 160px;
+      }
+
+      .info, .pix {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -229,7 +282,7 @@ nav {
     const swiper = new Swiper('.swiper', {
       loop: true,
       autoplay: {
-        delay: 30000, // 30 segundos
+        delay: 30000,
         disableOnInteraction: false,
       },
       navigation: {
