@@ -174,6 +174,58 @@
       header .header-text p {
         font-size: 0.8rem;
       }
+      .dicas {
+  padding: 2rem 1.5rem;
+  background: #fdf7f5;
+  max-width: 800px;
+  margin: auto;
+}
+
+.dicas h2 {
+  color: #b05c79;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dicas .info {
+  background: #fff;
+  border-left: 4px solid #b05c79;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dicas .info h3 {
+  margin-top: 0;
+  color: #8a4d5d;
+  font-size: 1.2rem;
+}
+
+.dicas .info p {
+  margin: 0.5rem 0 0 0;
+  line-height: 1.5;
+  color: #444;
+}
+.map-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.map-container h3 {
+  font-size: 1.2rem;
+  color: #b05c79;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
     }
   </style>
 </head>
@@ -193,14 +245,31 @@
       <strong>📍 Cerimônia:</strong><br>
       Paróquia Bom Jesus dos Aflitos<br>
       R. Cel. Nogueira Padilha, 583 - Vila Hortência, Sorocaba - SP<br>
-      <strong>⏰ Às 16h</strong>
+      <strong>⏰ Às 15:30h</strong>
+      <p>Pedimos encarecidamente que <strong>CHEGEM NO HORÁRIO!</strong></p>
     </div>
+    
+  <div class="map-container">
+    <h3>📍 Paróquia Bom Jesus dos Aflitos</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7824532846203!2d-47.44926942376147!3d-23.504344059501793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf60272add2b0b%3A0x1af17cebef395ddc!2sPar%C3%B3quia%20Bom%20Jesus%20dos%20Aflitos!5e0!3m2!1spt-PT!2sbr!4v1751378720187!5m2!1spt-PT!2sbr"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
     <div class="info">
       <strong>🎉 Festa:</strong><br>
       Santa Luiza Eventos<br>
       J9G5+H9 - Bacaetava, Iperó - SP<br>
       <strong>⏰ Às 19h</strong>
     </div>
+    <div class="map-container">
+      <h3>🎉 Santa Luiza Eventos</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12319.057397552673!2d-47.63493871615857!3d-23.370930675018624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5e58d8db02d41%3A0x404a21c41e10cff4!2sSanta%20Luiza%20Eventos!5e0!3m2!1spt-PT!2sbr!4v1751379140746!5m2!1spt-PT!2sbr"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    
     <p>Esperamos vocês para comemorar esse dia tão especial, que nós aguardamos por anos!</p>
   </section>
 
@@ -218,15 +287,38 @@
     </div>
   </section>
 
+  <section class="dicas">
+    <h2>Diquinhas </h2>
+  
+    <div class="info">
+      <h3>👗 Traje</h3>
+      <p>O traje sugerido é <strong>SOCIAL</strong>. Fiquem à vontade para se arrumar como se estivessem indo a um evento elegante, mas confortável!</p>
+      <p>Queremos todos bem arrumadinhos, para combinar com a lindeza de todos vocês, e com a felicidade dos nossos corações em finalmente poder viver isso ❤️</p>
+    </div>
+  
+    <div class="info">
+      <h3>🕓 Pontualidade</h3>
+      <p>A cerimônia começará às <strong>15:30h</strong> — então, chegue com antecedência! Afinal, ninguém quer ver uma Athena bravíssia, né?</p>
+    </div>
+  
+    <div class="info">
+      <h3>👶 Crianças</h3>
+      <p>Todas são<strong> muito bem-vindas</strong>! Teremos um espaço só para elas, para todos curtirem a festa! E se seu pequeno estiver com sono? Temos solução também!</p>
+    </div>
+  </section>
+  
+
   <section class="pix">
     <h2>Nosso maior presente é a sua presença!</h2>
-    <p>Mas se quiser nos presentear, aqui vão algumas dicas:</p>
+    <p>Mas <strong>se quiser</strong> nos presentear, aqui vão algumas dicas:</p>
     <p>Tem a nossa lista no mercado livre, com itens realistas e uns porque vai que alguém ganha na MegaSena:</p>
     <a class="button" href="https://www.mercadolivre.com.br/presentes/athena-e-gustavo-2r67i" target="_blank">
       Acessar nossa lista de presentes
     </a>
     <p>Tem pix... ❤️</p>
     <p><strong>Pix geral:</strong> athena.nha@gmail.com (e-mail - Athena)</p>
+    <p>Você também pode dar algo que você julgue legal ou especial, sem se prender a nenhuma lista...</p>
+    <p>E claro você pode nos presentear com, <strong>A SUA PRESENÇA</strong>, porque é isso o que <strong>mais</strong> queremos! ❤️</p>
   </section>
 
   <section>
